@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var persona = {
+            "name": 'aimar',
+            "surname": 'peruchena',
+            "mail": 'aimarperuchena@gmail.com',
+            "dni": 'XXXXXXXX',
+            rellenar: function(name, surname, mail, dni) {
+                this.name = name;
+                this.surname = surname;
+                this.mail = mail;
+                this.dni = dni;
+            }
+        }
+
+
+        var objeto = JSON.parse('{"alien": [{    "name": "paul",    "surname": "x",    "mail": "alien@gmail.com",    "dni": "XXXXXXXX"}]}');
+
+        for (alienijena in objeto.alien) {
+            console.log(objeto.alien[alienijena]);
+            persona.rellenar(objeto.alien[alienijena].name, objeto.alien[alienijena].surname, objeto.alien[alienijena].mail, objeto.alien[alienijena].dni)
+        }
+
+        console.log(persona)
+    </script>
+</body>
+
+</html>
