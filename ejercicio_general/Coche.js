@@ -48,10 +48,11 @@ class Coche {
     }
 
     getIva() {
-        return this.precio * 1.21;
+        return parseFloat(this.precio * 1.21, 2).toFixed(2);
     }
     getCaballoKilo() {
-        return this.potencia / this.peso;
+        return parseFloat(this.potencia / this.peso).toFixed(2);
+
     }
 
 
